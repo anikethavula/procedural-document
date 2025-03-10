@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Git Workflow Guide for Beginners</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Basic Git and GitHub Workflow for Beginners</h1>
+      <nav>
+        <ul>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#requirements">Requirements</a></li>
+          <li><a href="#safety">Safety</a></li>
+          <li><a href="#steps">Steps</a></li>
+          <li><a href="#conclusion">Conclusion</a></li>
+          <li><a href="#references">References</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="introduction" class="section">
+      <h2>Introduction</h2>
+      <div class="content-box">
+        <div class="text-content">
+          <p>Git and GitHub are essential tools for software developers, data analysts, and anyone working with version control. Git is a distributed version control system that tracks changes in code, while GitHub is a cloud-based platform that facilitates collaboration and repository management.</p>
+          <p>This guide provides step-by-step instructions on setting up and using Git and GitHub for beginners in a professional setting.</p>
+        </div>
+        <div class="image-content">
+          <img src="https://git-scm.com/images/logos/downloads/Git-Logo-2Color.png" alt="Git Logo" class="feature-image">
+        </div>
+      </div>
+    </section>
+
+    <section id="requirements" class="section">
+      <h2>Requirements</h2>
+      <div class="content-box">
+        <p>Before starting, ensure you have the following:</p>
+        <ul class="requirements-list">
+          <li><i class="fas fa-laptop"></i> A computer with macOS, Windows, or Linux</li>
+          <li><i class="fab fa-git-alt"></i> Git installed (Check by running <code>git --version</code> in the terminal or command prompt)</li>
+          <li><i class="fab fa-github"></i> A GitHub account (Sign up at <a href="https://github.com" target="_blank">GitHub.com</a>)</li>
+          <li><i class="fas fa-code"></i> A code editor (such as Visual Studio Code, Sublime Text, or IntelliJ IDEA)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="safety" class="section">
+      <h2>Safety Information</h2>
+      <div class="content-box safety-box">
+        <div class="safety-item">
+          <i class="fas fa-save"></i>
+          <h3>Backup your work</h3>
+          <p>Before pushing changes, review and save important files.</p>
+        </div>
+        <div class="safety-item">
+          <i class="fas fa-code-branch"></i>
+          <h3>Use branches</h3>
+          <p>Avoid making direct changes to the <code>main</code> branch to prevent conflicts.</p>
+        </div>
+        <div class="safety-item">
+          <i class="fas fa-history"></i>
+          <h3>Commit regularly</h3>
+          <p>Frequent commits help track changes effectively.</p>
+        </div>
+        <div class="safety-item">
+          <i class="fas fa-lock"></i>
+          <h3>Check permissions</h3>
+          <p>Ensure you have the necessary access rights before making changes to a repository.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="steps" class="section">
+      <h2>Steps to Use Git and GitHub</h2>
+      
+      <div class="step-container">
+        <div class="step-number">1</div>
+        <div class="step-content">
+          <h3>Install and Configure Git</h3>
+          <ol>
+            <li>Download and install Git from <a href="https://git-scm.com" target="_blank">git-scm.com</a>.</li>
+            <li>Open the terminal or command prompt and configure Git with your name and email:</li>
+          </ol>
+          <div class="code-block">
+            <pre><code>git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container">
+        <div class="step-number">2</div>
+        <div class="step-content">
+          <h3>Create a Repository on GitHub</h3>
+          <ol>
+            <li>Log in to your GitHub account.</li>
+            <li>Click on the New button to create a new repository.</li>
+            <li>Enter a repository name, select visibility (public or private), and click Create repository.</li>
+          </ol>
+          <div class="image-container">
+            <img src="/placeholder.svg?height=250&width=400" alt="Creating a new GitHub repository" class="step-image">
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container">
+        <div class="step-number">3</div>
+        <div class="step-content">
+          <h3>Clone the Repository Locally</h3>
+          <ol>
+            <li>Copy the repository URL from GitHub.</li>
+            <li>Open your terminal and navigate to the folder where you want to store the repository.</li>
+            <li>Run the following command to clone the repository:</li>
+          </ol>
+          <div class="code-block">
+            <pre><code>git clone https://github.com/your-username/repository-name.git</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container">
+        <div class="step-number">4</div>
+        <div class="step-content">
+          <h3>Make Changes and Commit</h3>
+          <ol>
+            <li>Navigate into the cloned repository:</li>
+          </ol>
+          <div class="code-block">
+            <pre><code>cd repository-name</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <ol start="2">
+            <li>Add the changes to Git:</li>
+          </ol>
+          <div class="code-block">
+            <pre><code>git add .</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <ol start="3">
+            <li>Commit the changes with a message:</li>
+          </ol>
+          <div class="code-block">
+            <pre><code>git commit -m "Your commit message"</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container">
+        <div class="step-number">5</div>
+        <div class="step-content">
+          <h3>Push Changes to GitHub</h3>
+          <ol>
+            <li>Upload your commits to GitHub:</li>
+          </ol>
+          <div class="code-block">
+            <pre><code>git push origin main</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <ol start="2">
+            <li>Refresh your GitHub repository to confirm the changes.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="step-container">
+        <div class="step-number">6</div>
+        <div class="step-content">
+          <h3>Create a Branch (Optional but Recommended)</h3>
+          <ol>
+            <li>Create and switch to a new branch:</li>
+          </ol>
+          <div class="code-block">
+            <pre><code>git checkout -b feature-branch</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <ol start="2">
+            <li>Make changes, commit them, and push the branch:</li>
+          </ol>
+          <div class="code-block">
+            <pre><code>git push origin feature-branch</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+          <div class="image-container">
+            <img src="/placeholder.svg?height=250&width=400" alt="Git branching workflow" class="step-image">
+          </div>
+        </div>
+      </div>
+
+      <div class="step-container">
+        <div class="step-number">7</div>
+        <div class="step-content">
+          <h3>Create a Pull Request</h3>
+          <ol>
+            <li>Navigate to your repository on GitHub.</li>
+            <li>Click on Pull Requests and select New pull request.</li>
+            <li>Compare changes and submit the pull request for review.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="step-container">
+        <div class="step-number">8</div>
+        <div class="step-content">
+          <h3>Merge Changes and Delete the Branch</h3>
+          <ol>
+            <li>Once the pull request is approved, merge it into the main branch.</li>
+            <li>Optionally, delete the branch after merging to keep the repository clean.</li>
+          </ol>
+          <div class="code-block">
+            <pre><code>git branch -d feature-branch
+git push origin --delete feature-branch</code></pre>
+            <button class="copy-btn" onclick="copyCode(this)">Copy</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="conclusion" class="section">
+      <h2>Conclusion and Further Resources</h2>
+      <div class="content-box">
+        <p>This guide provides a basic understanding of Git and GitHub workflows. As you gain experience, explore advanced topics such as rebasing, resolving merge conflicts, and setting up continuous integration.</p>
+        
+        <h3>Useful resources:</h3>
+        <div class="resources-grid">
+          <a href="https://docs.github.com" target="_blank" class="resource-card">
+            <i class="fab fa-github"></i>
+            <h4>GitHub Docs</h4>
+            <p>Official documentation for GitHub</p>
+          </a>
+          <a href="https://git-scm.com/book/en/v2" target="_blank" class="resource-card">
+            <i class="fas fa-book"></i>
+            <h4>Pro Git Book</h4>
+            <p>Comprehensive guide to Git</p>
+          </a>
+          <a href="https://education.github.com/git-cheat-sheet-education.pdf" target="_blank" class="resource-card">
+            <i class="fas fa-file-alt"></i>
+            <h4>Git Cheat Sheet</h4>
+            <p>Quick reference for Git commands</p>
+          </a>
+        </div>
+
+        <div class="accessibility-info">
+          <h3>Accessibility Information</h3>
+          <p>This guide is designed to be accessible to users of all abilities. If you encounter any accessibility issues or need additional assistance, please contact us.</p>
+          <ul>
+            <li>All images include descriptive alt text</li>
+            <li>The site is navigable via keyboard</li>
+            <li>Code blocks can be copied with a single click</li>
+            <li>Content follows a logical, sequential order</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="references" class="section">
+      <h2>References</h2>
+      <div class="content-box">
+        <ul class="references-list">
+          <li>Git Documentation: <a href="https://git-scm.com/doc" target="_blank">https://git-scm.com/doc</a></li>
+          <li>GitHub Learning Lab: <a href="https://lab.github.com/" target="_blank">https://lab.github.com/</a></li>
+          <li>Git Logo: <a href="https://git-scm.com/downloads/logos" target="_blank">https://git-scm.com/downloads/logos</a></li>
+          <li>Font Awesome Icons: <a href="https://fontawesome.com/" target="_blank">https://fontawesome.com/</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Git Workflow Guide | Created for Educational Purposes</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+

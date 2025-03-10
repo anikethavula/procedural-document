@@ -1,0 +1,382 @@
+/* Base Styles */
+:root {
+  --primary-color: #2ecc71;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --dark-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --text-color: #333;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+a {
+  color: var(--secondary-color);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-color);
+  text-decoration: underline;
+}
+
+code {
+  font-family: "Courier New", Courier, monospace;
+  background-color: #f1f1f1;
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Header Styles */
+header {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--box-shadow);
+}
+
+header h1 {
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+}
+
+nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+/* Main Content Styles */
+main {
+  padding: 2rem 0;
+}
+
+.section {
+  margin-bottom: 3rem;
+  scroll-margin-top: 80px;
+}
+
+.section h2 {
+  color: var(--dark-color);
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 3px solid var(--primary-color);
+  display: inline-block;
+}
+
+.content-box {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow);
+}
+
+/* Introduction Section */
+#introduction .content-box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+}
+
+.text-content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.image-content {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.feature-image {
+  max-width: 100%;
+  height: auto;
+  max-height: 200px;
+}
+
+/* Requirements Section */
+.requirements-list {
+  list-style: none;
+}
+
+.requirements-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.requirements-list i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+/* Safety Section */
+.safety-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.safety-item {
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: var(--border-radius);
+  background-color: #f8f9fa;
+  transition: var(--transition);
+}
+
+.safety-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+}
+
+.safety-item i {
+  font-size: 2rem;
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+.safety-item h3 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+/* Steps Section */
+.step-container {
+  display: flex;
+  margin-bottom: 2rem;
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+}
+
+.step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  min-width: 60px;
+  padding: 1rem;
+}
+
+.step-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.step-content h3 {
+  color: var(--dark-color);
+  margin-bottom: 1rem;
+}
+
+.step-content ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.step-content li {
+  margin-bottom: 0.5rem;
+}
+
+.code-block {
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  padding: 1rem;
+  margin: 1rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.code-block pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.copy-btn:hover {
+  background-color: var(--primary-color);
+}
+
+.image-container {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.step-image {
+  max-width: 100%;
+  border-radius: var(--border-radius);
+  border: 1px solid #ddd;
+}
+
+/* Conclusion Section */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.resource-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  color: var(--text-color);
+}
+
+.resource-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--box-shadow);
+  text-decoration: none;
+}
+
+.resource-card i {
+  font-size: 2.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+.resource-card h4 {
+  margin-bottom: 0.5rem;
+  color: var(--dark-color);
+}
+
+.accessibility-info {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #ddd;
+}
+
+.accessibility-info h3 {
+  margin-bottom: 1rem;
+}
+
+.accessibility-info ul {
+  margin-left: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* References Section */
+.references-list {
+  list-style: none;
+}
+
+.references-list li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--primary-color);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--dark-color);
+  color: white;
+  padding: 1.5rem 0;
+  text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .step-container {
+    flex-direction: column;
+  }
+
+  .step-number {
+    min-width: 100%;
+    padding: 0.5rem;
+  }
+
+  .safety-box {
+    grid-template-columns: 1fr;
+  }
+
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-box {
+    padding: 1rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+  }
+}
+
